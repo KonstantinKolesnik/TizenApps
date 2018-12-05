@@ -1,5 +1,4 @@
-﻿
-using Tizen.Wearable.CircularUI.Forms;
+﻿using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
 
 namespace TizenWearableApp1
@@ -8,7 +7,6 @@ namespace TizenWearableApp1
     {
         public App()
         {
-            // The root page of your application
             MainPage = new CirclePage
             {
                 Content = new StackLayout
@@ -28,12 +26,10 @@ namespace TizenWearableApp1
         {
             // Handle when your app starts
         }
-
         protected override void OnSleep()
         {
             // Handle when your app sleeps
         }
-
         protected override void OnResume()
         {
             // Handle when your app resumes
