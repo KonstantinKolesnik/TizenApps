@@ -11,7 +11,11 @@ namespace TizenWatchfaceApp1
         {
             base.OnCreate();
 
-            LoadWatchface(new TextWatchApplication() { BindingContext = viewModel });
+            LoadWatchface(new App() { BindingContext = viewModel });
+        }
+        protected override void OnAmbientChanged(AmbientEventArgs mode)
+        {
+            base.OnAmbientChanged(mode);
         }
         protected override void OnTick(TimeEventArgs time)
         {
@@ -20,16 +24,12 @@ namespace TizenWatchfaceApp1
             if (viewModel != null)
                 viewModel.Time = time.Time.UtcTimestamp;
         }
-        protected override void OnAmbientChanged(AmbientEventArgs mode)
-        {
-            base.OnAmbientChanged(mode);
-        }
         protected override void OnAmbientTick(TimeEventArgs time)
         {
             base.OnAmbientTick(time);
 
-            if (viewModel != null)
-                viewModel.Time = time.Time.UtcTimestamp;
+            //if (viewModel != null)
+            //    viewModel.Time = time.Time.UtcTimestamp;
         }
 
         static void Main(string[] args)
