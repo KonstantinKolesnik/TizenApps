@@ -34,7 +34,7 @@
     <PackageReference Include="Tizen.NET.TV" Version="4.4.0.1341">
       <ExcludeAssets>Runtime</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms.Platform.Tizen" Version="2.5.0.77107" />
+    <PackageReference Include="Xamarin.Forms.Platform.Tizen" Version="2.5.1.444934" />
   </ItemGroup>
 
 </Project>

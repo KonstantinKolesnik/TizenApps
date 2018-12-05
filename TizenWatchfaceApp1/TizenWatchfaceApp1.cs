@@ -27,6 +27,9 @@ namespace TizenWatchfaceApp1
         protected override void OnAmbientTick(TimeEventArgs time)
         {
             base.OnAmbientTick(time);
+
+            if (viewModel != null)
+                viewModel.Time = time.Time.UtcTimestamp;
         }
 
         static void Main(string[] args)
