@@ -1,5 +1,3 @@
-using System;
-
 namespace TizenXamlApp1
 {
     class Program : global::Xamarin.Forms.Platform.Tizen.FormsApplication
@@ -14,7 +12,7 @@ namespace TizenXamlApp1
         static void Main(string[] args)
         {
             var app = new Program();
-            global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
+            Xamarin.Forms.Platform.Tizen.Forms.Init(app);
             app.Run(args);
         }
     }

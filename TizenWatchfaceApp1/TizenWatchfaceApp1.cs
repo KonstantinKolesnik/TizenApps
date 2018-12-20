@@ -28,8 +28,8 @@ namespace TizenWatchfaceApp1
         {
             base.OnAmbientTick(time);
 
-            //if (viewModel != null)
-            //    viewModel.Time = time.Time.UtcTimestamp;
+            if (viewModel != null)
+                viewModel.Time = time.Time.UtcTimestamp;
         }
 
         static void Main(string[] args)

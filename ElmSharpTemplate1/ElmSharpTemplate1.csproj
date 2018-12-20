@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <!-- Property Group for Tizen40 Project -->
+  <!-- Property Group for .NET Core Project -->
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>tizen40</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -13,15 +13,14 @@
     <DebugType>None</DebugType>
   </PropertyGroup>
 
-  
   <ItemGroup>
-    <ProjectReference Include="..\MetalDetector\MetalDetector.csproj" />
+    <Folder Include="lib\"/>
+    <Folder Include="res\"/>
   </ItemGroup>
-  
 
   <!-- Include Nuget Package for Tizen Project building -->
   <ItemGroup>
-    <PackageReference Include="Tizen.NET" Version="4.0.0">
+    <PackageReference Include="Tizen.NET" Version="4.0.0" >
       <ExcludeAssets>Runtime</ExcludeAssets>
     </PackageReference>
     <PackageReference Include="Tizen.NET.Sdk" Version="1.0.1" />

@@ -12,7 +12,7 @@
                     TextColor="Green"
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="CenterAndExpand"/>
-                <Label Text="Test app"/>
+                <Label Text="Test app" HorizontalOptions="Center" VerticalOptions="End"/>
             </StackLayout>
         </ContentPage>
     </Application.MainPage>

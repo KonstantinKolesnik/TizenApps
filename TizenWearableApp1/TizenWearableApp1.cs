@@ -14,6 +14,7 @@ namespace TizenWearableApp1
             var app = new Program();
             Xamarin.Forms.Platform.Tizen.Forms.Init(app);
             Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init();
+
             app.Run(args);
         }
     }

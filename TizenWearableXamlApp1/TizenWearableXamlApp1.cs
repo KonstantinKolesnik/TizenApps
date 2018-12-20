@@ -1,6 +1,8 @@
+using Xamarin.Forms.Platform.Tizen;
+
 namespace TizenWearableXamlApp1
 {
-    class Program : Xamarin.Forms.Platform.Tizen.FormsApplication
+    class Program : FormsApplication
     {
         protected override void OnCreate()
         {

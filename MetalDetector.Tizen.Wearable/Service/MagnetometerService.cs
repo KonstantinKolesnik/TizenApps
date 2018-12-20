@@ -6,9 +6,6 @@ using Tizen.Sensor;
 [assembly: Xamarin.Forms.Dependency(typeof(MagnetometerService))]
 namespace MetalDetector.Tizen.Wearable.Service
 {
-    /// <summary>
-    /// Magnetometer service which allows to obtain the magnetometer data.
-    /// </summary>
     class MagnetometerService : IMagnetometerService
     {
         #region fields
