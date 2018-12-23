@@ -5,7 +5,7 @@
              x:Class="TizenWearableXamlApp1.MainPage">
     <c:CirclePage.Content>
         <StackLayout>
-            <Label Text="Welcome to TizenWearableXamlApp!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Label Text="Tizen Wearable App" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
     </c:CirclePage.Content>
 </c:CirclePage>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:MagnetometerApp.Converters;assembly=MagnetometerApp"
+             xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             x:Class="MagnetometerApp.MainPage">
+    <c:CirclePage.Resources>
+        <ResourceDictionary>
+            <converters:StrengthLevelToFileNameConverter x:Key="strengthLevelToFileNameConverter" />
+        </ResourceDictionary>
+    </c:CirclePage.Resources>
+
+    <c:CirclePage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="background.png"/>
+
+            <AbsoluteLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1"
+                IsVisible="{Binding IsInRange}"
+                Source="{Binding RelativeSignalStrength, Converter={StaticResource strengthLevelToFileNameConverter}}"
+                Rotation="{Binding Rotation}"/>
+                <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="text.png"/>
+                <Image x:Name="radar" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="radar.png"/>
+                <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="signal_direction_indicator_off.png" Rotation="{Binding Rotation}">
+                    <Image.Triggers>
+                        <DataTrigger Binding="{Binding IsInRange}" TargetType="Image" Value="True">
+                            <Setter Property="Source" Value="signal_direction_indicator_on.png" />
+                        </DataTrigger>
+                    </Image.Triggers>
+                </Image>
+
+                <StackLayout AbsoluteLayout.LayoutBounds="0, 154, 360, AutoSize" HorizontalOptions="FillAndExpand">
+                    <Label FontSize="10" HorizontalOptions="Center" Text="{Binding SignalStrength}" TextColor="White"/>
+                </StackLayout>
+
+                <StackLayout AbsoluteLayout.LayoutBounds="0,186,360,AutoSize" HorizontalOptions="FillAndExpand">
+                    <Label FontSize="7" HorizontalOptions="Center" Text="µT" TextColor="White"/>
+                </StackLayout>
+            </AbsoluteLayout>
+
+            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="frame.png"/>
+        </AbsoluteLayout>
+    </c:CirclePage.Content>
+</c:CirclePage>

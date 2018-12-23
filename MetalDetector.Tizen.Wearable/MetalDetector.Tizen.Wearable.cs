@@ -1,9 +1,11 @@
+using Xamarin.Forms.Platform.Tizen;
+
 namespace MetalDetector
 {
     /// <summary>
     /// Metal Detector forms application class for Tizen Wearable profile.
     /// </summary>
-    class Program : global::Xamarin.Forms.Platform.Tizen.FormsApplication
+    class Program : FormsApplication
     {
         #region methods
 
@@ -24,7 +26,7 @@ namespace MetalDetector
         static void Main(string[] args)
         {
             var app = new Program();
-            global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
+            Forms.Init(app);
             app.Run(args);
         }
 
