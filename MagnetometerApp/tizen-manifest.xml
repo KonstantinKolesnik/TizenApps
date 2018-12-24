@@ -8,7 +8,9 @@
         <splash-screens />
     </ui-application>
     <shortcut-list />
-    <privileges />
+    <privileges>
+        <privilege>http://tizen.org/privilege/healthinfo</privilege>
+    </privileges>
     <provides-appdefined-privileges />
     <feature name="http://tizen.org/feature/sensor.magnetometer">true</feature>
 </manifest>

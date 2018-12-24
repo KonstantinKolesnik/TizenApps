@@ -34,7 +34,22 @@ namespace MagnetometerApp.Service
         /// </summary>
         public MagnetometerService()
         {
-            _magnetometer = new Magnetometer();
+            //_magnetometer = new Magnetometer();
+
+            try
+            {
+                _magnetometer = new Magnetometer();
+            }
+            catch (NotSupportedException ex)
+            {
+                /// Magnetometer is not supported in the current device.
+                /// You can also check whether the magnetometer is supported with the following property:
+                /// var supported = Magnetometer.IsSupported;
+                /// 
+            }
+            catch (Exception e)
+            {
+            }
         }
 
         /// <summary>
